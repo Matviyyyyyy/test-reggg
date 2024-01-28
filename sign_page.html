@@ -1,0 +1,54 @@
+{% extends 'afmake.html' %}
+{%block main%}
+
+<section>
+  <div class="row">
+    <div class = "col-md-1 section-back-color"></div>
+    <div class = "col-md-10 ch-a-blue">
+      <br>
+      <br>
+      <h1 class="h-txt-horeca"><b>Особистий кабінет</b></h1>
+      <br>
+      <br>
+      <div class = "container">
+        <div class="row">
+          <div class = "col-md-2"></div>
+          <div class = "col-md-8">
+            <div class = "reg-page-white">
+              <form method="POST" action="/sign_in">
+                <br>
+                <h2 class="h_sig_txt">Вхід</h2>
+                <br>
+                <hr>
+                <br>
+                <input type="text" class="form-control" placeholder="Введіть своє ім'я" name="user_name_sign_page" required>
+                <div class="valid-feedback">Дійсний</div>
+                <div class="invalid-feedback">Будь ласка, заповніть це поле</div>
+                <br>
+                <br>
+                <input type="email" class="form-control" placeholder="Введіть свою електронну адресу" name="user_email_sign_page" required>
+                <div class="valid-feedback">Дійсний</div>
+                <div class="invalid-feedback">Будь ласка, заповніть це поле</div>
+                <br>
+                <br>
+                <input type="password" class="form-control" placeholder="Введіть свій пароль" name="user_password_sign_page" required>
+                <div class="valid-feedback">Дійсний</div>
+                <div class="invalid-feedback">Будь ласка, заповніть це поле</div>
+                <br>
+                <button type="submit" class="btn btn-light button_sig" onclick="change_href_sign()">Увійти</button>
+                <a href = "/reg_page"><button type="button" class="btn btn-light button_sig_reg">Реєстрація</button></a>
+                <br>
+              </form>
+            </div>
+          </div>
+          <div class = "col-md-2"></div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+    <div class = "col-md-1 section-back-color"></div>
+  </div>
+</section>
+
+{%endblock main%}
